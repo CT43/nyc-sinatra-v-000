@@ -1,6 +1,6 @@
 
 <h1>Edit Landmark</h1>
-<%= @figure.name %>
+<%= @landmark.name %>
 <form action="/figures/<%=@figure.id%>" method="POST">
   <input type="hidden" name="_method" value="PATCH">
   <label> Name </label>
