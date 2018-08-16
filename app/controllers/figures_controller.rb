@@ -5,10 +5,12 @@ class FiguresController < ApplicationController
     erb :'/figures/index'
   end
 
-
   get '/figures/new' do
     erb :'/figures/new'
   end
+
+  get '/figures/:id' do
+    @figure = Figure.find(id: params[:id])
 
   post '/figures' do
     @figure = Figure.new(params["figure"])
