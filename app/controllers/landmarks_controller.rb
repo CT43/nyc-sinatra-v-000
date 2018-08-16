@@ -25,19 +25,11 @@ class LandmarksController < ApplicationController
     redirect to "/landmarks/#{@landmark.id}"
   end
 
-  patch '/figures/:id' do
-    @figure = Figure.find_by(id: params[:id])
-      @figure.update(params[:figure])
-      if !params[:landmark][:name].empty?
-        @figure.landmarks << Landmark.create(params[:landmark])
-      end
-
-      if !params[:title][:name].empty?
-        @figure.titles << Title.create(params[:title])
-      end
-
-      @figure.save
-      redirect to "/figures/#{@figure.id}"
+  patch '/landmarks/:id' do
+    @landmark = Landmark.find_by(id: params[:id])
+      @landmark.update(params[:landmark])
+      @landmark.save
+      redirect to "/landmarks/#{@landmark.id}"
   end
 
 end
