@@ -13,8 +13,8 @@
   <input type="text" name="title[name]"> </br>
 
   <label> Landmarks </label>
-  <% Landmark.all.each do |genre| %>
-    <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>">
+  <% Landmark.all.each do |landmark| %>
+    <input id="<%= landmark.name %>" type="checkbox" name="landmark[name]" value="<%= genre.id %>">
   <% end %>
 
   <input type="submit" value="Create">
