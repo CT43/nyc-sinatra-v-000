@@ -2,7 +2,7 @@ class FiguresController < ApplicationController
 
   get '/figures' do
     @figures = Figure.all
-    erb :show
+    erb :index
   end
 
 
