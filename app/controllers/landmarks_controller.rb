@@ -22,7 +22,7 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
     @landmark = Landmark.new(params["landmark"])
     @landmark.save
-    redirect to "/landmarks/#{@landmark.id}"
+    redirect to "/figures/#{@landmark.id}"
   end
 
 end
