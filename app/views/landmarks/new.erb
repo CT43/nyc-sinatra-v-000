@@ -9,6 +9,8 @@
     <input type="checkbox" name="figure[title_ids][]" value="<%= title.name %"> <br>
   <% end %>
 
+  <h2>Create New Title:</h2>
+
   <label> Genres </label>
   <% Genre.all.each do |genre| %>
     <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>">
