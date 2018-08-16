@@ -19,8 +19,6 @@ class FiguresController < ApplicationController
     erb :'/figures/edit'
   end
 
-
-
   post '/figures' do
     @figure = Figure.new(params["figure"])
     if !params[:landmark][:name].empty?
@@ -32,4 +30,8 @@ class FiguresController < ApplicationController
     @figure.save
     redirect to "/figures/#{@figure.id}"
   end
+
+  patch '/figures/:id' do 
+    
+  end 
 end
