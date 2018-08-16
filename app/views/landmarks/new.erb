@@ -12,8 +12,8 @@
   <h2>Create New Title:</h2>
   <input type="text" name="title[name]"> </br>
 
-  <label> Genres </label>
-  <% Genre.all.each do |genre| %>
+  <label> Landmarks </label>
+  <% Landmark.all.each do |genre| %>
     <input id="<%= genre.name %>" type="checkbox" name="genres[]" value="<%= genre.id %>">
   <% end %>
 
