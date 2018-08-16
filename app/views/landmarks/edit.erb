@@ -5,8 +5,8 @@
   <input type="hidden" name="_method" value="PATCH">
 
     <h4>Edit Landmark:</h4>
-    Name: <input type="text" id="name" name="landmark[name]">
-    Year: <input type="text" name="year_completed" value="<%=@landmark.year_completed.to_s%>">
+    Name: <input type="text" id="new_landmark" name="landmark[name]">
+    Year: <input type="text" name="landmark[year_completed]" value="<%=@landmark.year_completed.to_s%>">
 
     <input type="submit" value="Edit Landmark">
   </form>
