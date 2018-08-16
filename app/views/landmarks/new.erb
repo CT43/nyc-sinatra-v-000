@@ -6,11 +6,8 @@
 
   <label> Titles </label>
   <% Title.all.each do |title| %>
-    <input type="checkbox" name="figure[title_ids][]" value="<%= title.name %">
+    <input type="checkbox" name="figure[title_ids][]" value="<%= title.name %"> <br>
   <% end %>
-
-  <label> Titles </label> </br>
-  <input type="checkbox" name="figure[title_ids][]"> </br>
 
   <label> Genres </label>
   <% Genre.all.each do |genre| %>
