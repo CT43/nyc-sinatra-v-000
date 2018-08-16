@@ -11,5 +11,6 @@ class FiguresController < ApplicationController
     @figure.landmark = Landmark.find_or_create_by(name: params[:name])
     @figure.landmark_ids = params[:landmark_ids]
     @figure.save
+  end
 
 end
