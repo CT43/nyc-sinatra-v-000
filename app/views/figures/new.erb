@@ -4,22 +4,3 @@
   <label> Name </label>
   <input type="text" name="figure[name]"> <br></br>
 
-  <label> Titles </label>
-  <% Title.all.each do |title| %>
-    <input type="checkbox" name="figure[title_ids][]" value="<%= title.id %"> <br>
-  <% end %>
-
-  <h2>Create New Title:</h2>
-  <input type="text" name="title[name]"> </br>
-
-  <label> Landmarks </label>
-  <% Landmark.all.each do |landmark| %>
-    <input id="<%= landmark.name %>" type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>">
-  <% end %>
-
-  <h2>Create New Landmark:</h2>
-  Name: <input type="text" name="landmark[name]">
-  Year: <input type="text" name="landmark[year_completed]">
-
-  <input type="submit" value="Create New Figure">
-</form>
