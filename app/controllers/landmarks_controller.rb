@@ -14,35 +14,5 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/show'
   end
 
-  get '/landmarks/:id/edit' do
-    @landmark = Landmark.find_by(id: params[:id])
-    erb :'/landmarks/edit'
-  end
 
-  post '/landmarks' do
-    @landmark = Landmark.new(params["landmark"])
-    if !params[:landmark][:name].empty?
-      @landmark.landmarks << Landmark.create(params[:landmark])
-    end
-    if !params[:title][:name].empty?
-      @landmark.titles << Title.create(params[:title])
-    end
-    @landmark.save
-    redirect to "/landmarks/#{@landmark.id}"
-  end
-
-  patch '/landmarks/:id' do
-    @landmark = Landmark.find_by(id: params[:id])
-      @landmark.update(params[:landmark])
-      if !params[:landmark][:name].empty?
-        @landmark.landmarks << Landmark.create(params[:landmark])
-      end
-
-      if !params[:title][:name].empty?
-        @landmark.titles << Title.create(params[:title])
-      end
-
-      @landmark.save
-      redirect to "/landmarks/#{@landmark.id}"
-  end
 end
