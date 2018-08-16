@@ -14,7 +14,7 @@
 
   <label> Landmarks </label>
   <% Landmark.all.each do |landmark| %>
-    <input id="<%= landmark.name %>" type="checkbox" name="landmark[name]" value="<%= genre.id %>">
+    <input id="<%= landmark.name %>" type="checkbox" name="landmark[name]" value="<%= landmark.id %>">
   <% end %>
 
   <input type="submit" value="Create">
