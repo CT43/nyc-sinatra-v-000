@@ -14,6 +14,11 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/show'
   end
 
+  get '/figures/:id/edit' do
+    @figure = Figure.find_by(id: params[:id])
+    erb :'/figures/edit'
+  end
+
   post '/landmarks' do
     @landmark = Landmark.new(params["landmark"])
     @landmark.save
