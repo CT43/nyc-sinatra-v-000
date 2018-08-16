@@ -15,7 +15,7 @@
     <input type="text" name="title[name]"> </br>
 
     <label> Landmarks </label>
-      <% Landmark.all.each do |landmark| 
+      <% Landmark.all.each do |landmark| %>
       <%= landmark.name %>
       <input id="<%= landmark.name %>" type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>">
     <% end %>
