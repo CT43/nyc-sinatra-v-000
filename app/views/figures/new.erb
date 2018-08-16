@@ -5,13 +5,13 @@
   <input type="text" name="figure[name]"> <br></br>
 
 
-    <label> <h3>Titles</h3> </label> 
+    <label> <h3>Titles</h3> </label>
     <% Title.all.each do |title| %>
       <%= title.name %>
       <input type="checkbox" name="figure[title_ids][]" value="<%= title.id %>"> <br>
     <% end %>
 
-    <h2>Create New Title:</h2>
+    <Create New Title:
     <input type="text" name="title[name]">
 
     <label> Landmarks </label>
